@@ -28,6 +28,9 @@ namespace Microservice_AzureServiceBus
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHostedService<ProductQueueConsumer>();
+            services.AddHostedService<ProductTopicConsumer1>();
+            services.AddHostedService<ProductTopicConsumer2>();
+            services.AddHostedService<ProductTopicConsumer3>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
